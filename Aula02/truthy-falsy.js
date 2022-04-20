@@ -7,6 +7,7 @@ const contaPaga = false;
 //truthy ou falsy  
 // 0 => false
 // 1 => true
+//Null e Undefined = false
 
 
 let numero = 3;
