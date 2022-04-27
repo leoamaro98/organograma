@@ -22,6 +22,7 @@ botaoAdicionar.addEventListener("click", function () {
             
         }
         
+        console.log("teste");
         });
     xhr.send();
 });
