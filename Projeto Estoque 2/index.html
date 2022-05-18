@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Consulta Estoque</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+</head>
+
+<body>
+	<header>
+		<div class="container-top">
+			<img src="logo-branca.png" class="logo">
+		</div>
+	</header>
+	<main>
+		<section class="container">
+			<h2>
+				<selection id="ambiente">
+					<label for="ambientes">Selecione o Ambiente</label>
+					<select name="ambiente" id="ambientes">
+						<option value="GAUSS">GAUSS</option>
+						<option value="CDG">CDG</option>
+						<option value="SPG">SPG</option>
+						<option value="NSG">NSG</option>
+					</select>
+					<button id="buscar-paciente">Buscar</button>
+				</selection>
+			</h2>
+
+			<label class="filtrar-tabela" for="filtrar-tabela">Pesquisar Produto: </label>
+			<button id="reset-table">Zerar consulta</button>
+			<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o codigo do produto">
+
+
+			<div style="overflow:auto; width: 100%; height:600px ">
+				<table id="tabela">
+					<thead>
+						<tr id="teste">
+							<th>Codigo Comercial</th>
+							<th>Código Fiscal</th>
+							<th>Descrição</th>
+							<th>Estoque</th>
+							<th>Pedido em Aberto</th>
+							<th>Saldo Disponivel</th>
+							<th>Embalagem</th>
+							<th>Fardo</th>
+							<th>Caixa</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<span id="erro-ajax" class="invisivel">Erro ao buscar estoque</span>
+
+		</section>
+	</main>
+	<section class="container">
+
+		<ul id="mensagens-erro">
+		</ul>
+	</section>
+	<script src="form.js"></script>
+	<script src="filtra.js"></script>
+	<script src="homepage.js"></script>
+	<script src="resetar-estoque.js"></script>
+</body>
+<footer>
+	<img class="copyright" src="logo-branca.png">
+	<p class="copyright">&copy; Copyright Faraway Tecnologia - 2022</p>
+</footer>
+
+</html>

@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(0, 0, 0);
+
+}
+
+#title {
+    font-family: "Product Sans Medium";
+    color: white;
+}
+
+#caixa {
+    font-family: "Product Sans Medium";
+    font-size: 40px;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    height: 800px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+
+
+
+#ambientes {
+    font-family: "Product Sans Medium";
+    text-align: center;
+    width: 200px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: all 1s;
+
+}
+
+#ambientes:hover {
+    background-color: white;
+    color: black;
+
+}
+
+#buscar-paciente {
+    font-family: "Product Sans Medium";
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    float: right;
+    cursor: pointer;
+    float: right;
+
+    transition: all 1s;
+
+
+}
+
+#buscar-paciente:hover {
+    background-color: white;
+    color: black;
+
+}
+
+
+#tabela {
+    font-family: "Calibri";
+    color: white;
+    border-radius: 8px;
+}
+
+th {
+    font-family: "Calibri";
+    color: black;
+}
+
+tr:hover {
+    color: black;
+    background-color: white;
+
+}
+
+
+
+
+#reset-table {
+    font-family: "Product Sans Medium";
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    float: right;
+    transition: all 1s;
+
+}
+
+#reset-table:hover {
+    background-color: white;
+    color: black;
+}
