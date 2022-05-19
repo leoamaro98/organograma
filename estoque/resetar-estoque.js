@@ -4,5 +4,5 @@ let trs = document.querySelector(".produto");
 
 
 btReset.addEventListener('click', function () {
-   location.reload();
+   window.location.href = "homepage.html";
 })

@@ -1,48 +1,49 @@
-*{
+* {
 	box-sizing: border-box;
- }
+}
 
 
-header{
-	background-color: #333;
+header {
+	background-color: #191919;
 	height: 4em;
 	color: #FFF;
 	margin-bottom: 1em;
-	
+
 }
 
-header h1{
+header h1 {
 	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
-}
-header h2{
-	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
+	display: inline-block;
+	vertical-align: middle;
 }
 
-header .container:before{
+header h2 {
+	font-size: 2em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header .container:before {
 	content: '';
-	display:inline-block;
+	display: inline-block;
 	height: 100%;
-	vertical-align:	middle;
+	vertical-align: middle;
 }
 
-.container{
-	
+.container {
+
 	width: 80%;
 	height: 100%;
 	margin: 0 auto;
-	
+
 }
 
-section{
+section {
 	margin: 2em 0;
 	overflow: hidden;
 }
 
-section h2{
+section h2 {
 	font-size: 3em;
 	display: block;
 	padding-bottom: .5em;
@@ -50,34 +51,35 @@ section h2{
 	margin-bottom: .5em;
 }
 
-table{
+table {
 	width: 100%;
-	
-	margin-bottom : .5em;
-    table-layout: fixed;
-	
-	
+
+	margin-bottom: .5em;
+	table-layout: fixed;
+
+
 }
 
-td, th {
+td,
+th {
 	padding: .7em;
 	margin: 0;
 	border: 1px solid #ccc;
 	text-align: center;
 }
 
-th{
+th {
 	font-weight: bold;
 	background-color: #EEE;
 }
 
-label{
+label {
 	color: #555;
 	display: block;
 	margin-bottom: .2em;
 }
 
-.campo{
+.campo {
 	margin: 0;
 	padding-bottom: 1em;
 	width: 100%;
@@ -86,18 +88,18 @@ label{
 	width: 100%;
 }
 
-.campo-medio{
+.campo-medio {
 	display: inline-block;
 	padding-right: .5em;
 }
 
-.grupo{
+.grupo {
 	width: 32%;
 	display: inline-block;
 	padding: 10px 0px;
 }
 
-buttoon{
+buttoon {
 	padding: .5em 2em;
 	border: 0;
 	border-bottom: 3px solid;
@@ -106,74 +108,93 @@ buttoon{
 	margin: 0;
 	margin-top: -3px;
 	color: #fff;
-	background-color:#0c8cd3;
+	background-color: #0c8cd3;
 	border-color: #04324c;
 	width: 20%;
-    display: block;
-    clear: both;
-    margin: 10px 0px;
+	display: block;
+	clear: both;
+	margin: 10px 0px;
 
 }
 
-button:active{
-	margin-top:0px;
+button:active {
+	margin-top: 0px;
 	border: 0;
 }
 
-button[disabled=disabled], button:disabled {
-    background-color: gray;
+button[disabled=disabled],
+button:disabled {
+	background-color: gray;
 	border-color: darkgray;
 
 }
 
-.adicionar-paciente{
-    margin-top: 30px;
+.adicionar-paciente {
+	margin-top: 30px;
 }
 
-.campo-invalido{
+.campo-invalido {
 	border: 1px solid red;
 }
 
-.paciente-invalido{
+.paciente-invalido {
 
 	background-color: lightcoral;
 
 }
 
-#mensagens-erro{
+#mensagens-erro {
 
 	color: red;
 
 }
 
 
-.fadeOut{
+.fadeOut {
 	opacity: 0;
 	transition: 0.5s;
 
 }
 
-#filtrar-tabela{
+#filtrar-tabela {
 	width: 200px;
 	height: 30px;
 	margin-bottom: 10px
 }
 
-.invisivel{
+.invisivel {
 	display: none;
 
 }
 
-.logo{
-	
+.logo {
+
 	width: 190px;
 	margin: 10px 20px;
 	padding: 0 10px;
 	left: 0;
-	
+
 }
 
-.filtrar-tabela{
+.filtrar-tabela {
 
 	color: white;
+}
+
+footer {
+	text-align: center;
+	background: rgb(19, 19, 19);
+	color: white;
+}
+
+footer img {
+	width: 150px;
+	margin: 20px;
+}
+
+
+
+#ambiente-atual {
+	color: white;
+	font-family: "Product Sans Medium";
 }

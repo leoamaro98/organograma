@@ -18,8 +18,6 @@ function monstraMensagem(event) {
 
     }
 
-    adicionaPacienteNaTabela(paciente);
-
     form.reset();
     var msgErro = document.querySelector("#mensagens-erro");
     msgErro.innerHTML = "";

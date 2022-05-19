@@ -19,20 +19,11 @@
 	<main>
 		<section class="container">
 			<h2>
-				<selection id="ambiente">
-					<label for="ambientes">Selecione o Ambiente</label>
-					<select name="ambiente" id="ambientes">
-						<option value="GAUSS">GAUSS</option>
-						<option value="CDG">CDG</option>
-						<option value="SPG">SPG</option>
-						<option value="NSG">NSG</option>
-					</select>
-					<button id="buscar-paciente">Buscar</button>
-				</selection>
+				<label id="ambiente-atual">Estoque </label>
 			</h2>
 
-			<label class="filtrar-tabela" for="filtrar-tabela">Pesquisar Produto: </label>
-			<button id="reset-table">Zerar consulta</button>
+			<label class="filtrar-tabela" for="filtrar-tabela">Filtrar Produto: </label>
+			<button id="reset-table">Voltar</button>
 			<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o codigo do produto">
 
 
@@ -69,6 +60,8 @@
 	<script src="filtra.js"></script>
 	<script src="homepage.js"></script>
 	<script src="resetar-estoque.js"></script>
+	
+
 </body>
 
 </html>

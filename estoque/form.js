@@ -53,7 +53,7 @@ function obtemPacienteForm(form) {
     var produto = {
         description: form.descric.value,
         open_order: form.open_order.value,
-        available: form.available.value,
+        avaliable: form.avaliable.value,
         product: form.product.value,
         product_erp: form.product_erp.value,
         stock_balance: form.stock_balance.value,
@@ -75,7 +75,7 @@ function montaTr(produto) {
     produtoTr.appendChild(montaTd(produto.product, "info-product"));
     produtoTr.appendChild(montaTd(produto.product_erp, "info-producterp"));
     produtoTr.appendChild(montaTd(produto.description, "info-descricao"));
-    produtoTr.appendChild(montaTd(produto.available, "info-avaliable"));
+    produtoTr.appendChild(montaTd(produto.avaliable, "info-avaliable"));
     produtoTr.appendChild(montaTd(produto.open_order, "info-order"));
     produtoTr.appendChild(montaTd(produto.stock_balance, "info-balance"));
     produtoTr.appendChild(montaTd(produto.multiple_cd_bar, "info-multcdbar"));

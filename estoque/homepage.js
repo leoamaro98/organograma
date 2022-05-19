@@ -2,13 +2,23 @@
 var ambientes = document.querySelector("#ambientes");
 var botaoAdicionar = document.querySelector("#buscar-paciente");
 var tabela = document.getElementById("table");
+var ambienteSelecionado =  localStorage.getItem('valueText');
+var ambienteAtual = document.querySelector("#ambiente-atual")
+
+window.onload = function() {
+   
+    validaClick(ambienteSelecionado);
+    console.log(ambienteSelecionado)
+    ambienteAtual.textContent = `Estoque ${ambienteSelecionado}`;
+    
+  };
 
 
 function validaClick(ambienteSelecionado) {
     let ambiente;
     if (ambienteSelecionado == "GAUSS") {
         ambiente = "gauss"
-    
+
     } else if (ambienteSelecionado == "CDG") {
         ambiente = "cdg"
         console.log(`Ambiente selecionado é ${ambienteSelecionado}`);
@@ -24,10 +34,12 @@ function validaClick(ambienteSelecionado) {
         console.log(`Ambiente selecionado é ${ambienteSelecionado}`);
 
     }
-
+    
     geraToken(ambiente);
+    return ambiente;
 
 }
+
 
 function conectaEstoque(ambiente, token) {
     //console.log(`URL ${url} e TOKEN ${token}`);
@@ -38,8 +50,6 @@ function conectaEstoque(ambiente, token) {
             'authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
         },
-
-
     })
 
         .then(function (response) {
@@ -85,10 +95,4 @@ function geraToken(ambiente) {
 
 }
 
-
-//BOTAO 
-botaoAdicionar.addEventListener("click", function () {
-    var ambienteSelecionado = ambientes.value;
-    validaClick(ambienteSelecionado);
-});
 

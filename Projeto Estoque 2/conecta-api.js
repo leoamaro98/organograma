@@ -1,34 +1,6 @@
-
-var ambientes = document.querySelector("#ambientes");
-var botaoAdicionar = document.querySelector("#buscar-paciente");
-var tabela = document.getElementById("table");
-
-
-function validaClick(ambienteSelecionado) {
-    let ambiente;
-    if (ambienteSelecionado == "GAUSS") {
-        ambiente = "gauss"
-
-    } else if (ambienteSelecionado == "CDG") {
-        ambiente = "cdg"
-        console.log(`Ambiente selecionado é ${ambienteSelecionado}`);
-
-
-    } else if (ambienteSelecionado == "SPG") {
-        ambiente = "spg"
-        console.log(`Ambiente selecionado é ${ambienteSelecionado}`);
-
-
-    } else {
-        ambiente = "nsg"
-        console.log(`Ambiente selecionado é ${ambienteSelecionado}`);
-
-    }
-    
-    geraToken(ambiente);
-    return ambiente;
-
-}
+var divCarregando = document.querySelector("#divCarregando")
+var ambienteAtual = document.querySelector("#ambiente-atual")
+var tabela = document.querySelector("#tabela")
 
 
 function conectaEstoque(ambiente, token) {
@@ -40,8 +12,6 @@ function conectaEstoque(ambiente, token) {
             'authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
         },
-
-
     })
 
         .then(function (response) {
@@ -86,5 +56,3 @@ function geraToken(ambiente) {
     })
 
 }
-
-
