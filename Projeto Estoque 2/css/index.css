@@ -53,7 +53,6 @@ section h2 {
 
 table {
 	width: 100%;
-
 	margin-bottom: .5em;
 	table-layout: fixed;
 
@@ -197,4 +196,35 @@ footer img {
 #ambiente-atual {
 	color: white;
 	font-family: "Product Sans Medium";
+}
+
+.info-product:hover{
+	text-decoration: underline black;
+	cursor: pointer;
+	
+}
+
+.div-top{
+	display: inline-block;
+}
+
+.btn-export{
+    font-family: "Product Sans Medium";
+    font-size: 15px;
+	font-weight: bold;
+	padding: 10px 10px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+	top:10%;
+    transition: all 1s;
+}
+
+.btn-export:hover{
+    background-color: white;
+    color: black;
 }
