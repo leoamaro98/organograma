@@ -12,22 +12,28 @@
   <div id="caixa">
     <header>
       <h1><img src="img/white-logo-fw.png" width="600" height="200"></h1>
+    </header>
 
-     
+    <div id="tela-login">
+
       <select name="ambiente" id="ambientes-home">
         <option value="GAUSS">GAUSS</option>
         <option value="CDG">CDG</option>
         <option value="SPG">SPG</option>
         <option value="NSG">NSG</option>
       </select>
-    </header>
-    <button id="btn-estoque" class="btn-inicial">Acessar estoque</button>
+
+      <input type="text" id="usuario" class="input-padrao" required placeholder="Usuario">
+
+      <input type="text" id="senha" class="input-padrao" required placeholder="Senha">
+      <button id="btn-estoque" class="btn-inicial">Acessar estoque</button>
+    </div>
+    <span id="erro-ajax" class="invisivel">Usuario e senha incorreto</span>
   </div>
 </body>
 
+<script src="login.js"></script>
+<script src="conecta-api.js"></script>
 
-	<script src="login.js"></script>
-	
-  
 
 </html>

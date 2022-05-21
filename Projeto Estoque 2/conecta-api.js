@@ -6,15 +6,14 @@ var tabela = document.querySelector("#tabela")
 function conectaEstoque(ambiente, token) {
     //console.log(`URL ${url} e TOKEN ${token}`);
 
+
     const estoque = fetch(`http://35.231.237.151:8080/gateway/api/stock?&environment=${ambiente}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
         },
-    })
-
-        .then(function (response) {
+    }).then(function (response) {
             //console.log("Resposta do servidor", response)//promise
             return response.json();
         })
@@ -33,14 +32,14 @@ function conectaEstoque(ambiente, token) {
 }
 
 
-function geraToken(ambiente) {
+function geraToken(getUser, getSenha, ambiente) {
 
     const token = fetch(`http://35.231.237.151:8080/gateway/api/token?environment=${ambiente}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            "username": "admin",
-            "password": `fenix${ambiente}@07`
+            "username": `${getUser}`,
+            "password": `${getSenha}`
         })
 
     }).then(function (response) {

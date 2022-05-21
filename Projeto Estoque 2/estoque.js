@@ -3,19 +3,29 @@ var ambienteSelecionado = localStorage.getItem('valueText');
 var tabela = document.querySelector("#tabela");
 var btnExport = document.querySelector('[data-js="btn-export"]');
 var btReset = document.querySelector('#reset-table');
+var getSenha = sessionStorage.getItem('valueTextSenha');
+var getToken = sessionStorage.getItem('valueTextToken');
+
 
 window.onload = function () {
 
+    if (getToken != null) {
+        console.log("token é", getToken)
+        var getUser = sessionStorage.getItem('valueTextUser');
+        var getSenha = sessionStorage.getItem('valueTextSenha');
+        geraToken(getUser, getSenha, ambienteSelecionado);
+        ambienteAtual.textContent = `Estoque ${ambienteSelecionado}`;
+    } else {
+        window.location.href = "homepage.html";
+    }
 
-    validaClick(ambienteSelecionado);
-    console.log(ambienteSelecionado)
-    ambienteAtual.textContent = `Estoque ${ambienteSelecionado}`;
+}
 
-};
-
-btReset.addEventListener('click', function () {
+btReset.addEventListener('click', function(){
     window.location.href = "homepage.html";
+
 })
+
 
 tabela.addEventListener('dblclick', function (event) {
     var codCom = $(event.target).text();
@@ -27,6 +37,9 @@ tabela.addEventListener('dblclick', function (event) {
         console.log("Clique no campo Codigo Comercial");
 });
 
+btnExport.addEventListener('click', function () {
+    exportTableToCsv();
+});
 
 function validaClick(ambienteSelecionado) {
     let ambiente;
@@ -54,17 +67,11 @@ function validaClick(ambienteSelecionado) {
 
 }
 
-btnExport.addEventListener('click', function () {
-    exportTableToCsv();
-});
-
-
-
 
 function exportTableToCsv() {
     var tableRows = document.querySelectorAll("tr");
     const CSVString = Array.from(tableRows)
-        .map(row => Array.from(row.cells)  
+        .map(row => Array.from(row.cells)
             .map(cell => cell.textContent)  //pega texto da cells
             .join(',')).join('\n') //separa por virgula
 
