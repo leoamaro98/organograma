@@ -3,6 +3,79 @@
 }
 
 
+
+body {
+	/*background-image: linear-gradient(#fefefe, black);*/
+	background: black;
+
+}
+
+
+#reset-table {
+	font-family: "Product Sans Medium";
+	font-size: 20px;
+	text-align: center;
+	width: 100px;
+	border-radius: 8px;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+	float: right;
+	transition: all 1s;
+
+}
+
+#btn-consultaProdutos{
+	padding: 10px 0;
+	font-size: 15px;
+	text-align: center;
+	width: 150px;
+	border-radius: 8px;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+	float: right;
+	transition: all 1s;
+
+
+}
+
+
+#reset-table:hover {
+	background-color: white;
+	color: black;
+}
+
+
+.progresso {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 30px 0;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 8px;
+	height: 100px;
+	width: 25%;
+	animation: piscaPisca 2s infinite;
+
+}
+
+@keyframes piscaPisca {
+	30% {
+		color: gray;
+	}
+}
+
+
 header {
 	background-color: #191919;
 	height: 4em;
@@ -11,11 +84,6 @@ header {
 
 }
 
-header h1 {
-	font-size: 2em;
-	display: inline-block;
-	vertical-align: middle;
-}
 
 header h2 {
 	font-size: 2em;
@@ -23,53 +91,28 @@ header h2 {
 	vertical-align: middle;
 }
 
-header .container:before {
+/*header .container:before {
 	content: '';
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
-}
+}*/
 
-.container {
 
+
+.section-container {
+	overflow: hidden;
 	width: 80%;
 	height: 100%;
 	margin: 0 auto;
-
 }
 
-section {
-	margin: 2em 0;
-	overflow: hidden;
-}
-
-section h2 {
+.section-container h2 {
 	font-size: 3em;
 	display: block;
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
-}
-
-table {
-	width: 100%;
-	margin-bottom: .5em;
-	table-layout: fixed;
-
-
-}
-
-td,
-th {
-	padding: .7em;
-	margin: 0;
-	border: 1px solid #ccc;
-	text-align: center;
-}
-
-th {
-	font-weight: bold;
-	background-color: #EEE;
 }
 
 label {
@@ -78,43 +121,6 @@ label {
 	margin-bottom: .2em;
 }
 
-.campo {
-	margin: 0;
-	padding-bottom: 1em;
-	width: 100%;
-	border: 1px solid #ccc;
-	padding: .7em;
-	width: 100%;
-}
-
-.campo-medio {
-	display: inline-block;
-	padding-right: .5em;
-}
-
-.grupo {
-	width: 32%;
-	display: inline-block;
-	padding: 10px 0px;
-}
-
-buttoon {
-	padding: .5em 2em;
-	border: 0;
-	border-bottom: 3px solid;
-	font-size: 1.2em;
-	cursor: pointer;
-	margin: 0;
-	margin-top: -3px;
-	color: #fff;
-	background-color: #0c8cd3;
-	border-color: #04324c;
-	width: 20%;
-	display: block;
-	clear: both;
-	margin: 10px 0px;
-
-}
 
 button:active {
 	margin-top: 0px;
@@ -128,26 +134,11 @@ button:disabled {
 
 }
 
-.adicionar-paciente {
-	margin-top: 30px;
-}
-
-.campo-invalido {
-	border: 1px solid red;
-}
-
-.paciente-invalido {
-
-	background-color: lightcoral;
-
-}
-
 #mensagens-erro {
 
 	color: red;
 
 }
-
 
 .fadeOut {
 	opacity: 0;
@@ -158,7 +149,10 @@ button:disabled {
 #filtrar-tabela {
 	width: 200px;
 	height: 30px;
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	border-radius: 8px;
+	font-size: 15px;
+	padding: 1em 0;
 }
 
 .invisivel {
@@ -173,11 +167,6 @@ button:disabled {
 	padding: 0 10px;
 	left: 0;
 
-}
-
-.filtrar-tabela {
-
-	color: white;
 }
 
 footer {
@@ -198,34 +187,108 @@ footer img {
 	font-family: "Product Sans Medium";
 }
 
-.info-product:hover{
+.info-product:hover {
 	text-decoration: underline black;
 	cursor: pointer;
-	
+
 }
 
-.div-top{
+
+
+.div-top {
 	display: inline-block;
 }
 
-.btn-export{
-    font-family: "Product Sans Medium";
-    font-size: 15px;
+.btn-export {
+	margin-top: 10px;
+	font-size: 15px;
 	font-weight: b;
 	padding: 10px 10px;
-    border-radius: 8px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
-    position: absolute;
-    right: 10%;
-	top:10%;
-    transition: all 1s;
+	border-radius: 8px;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+	transition: all 1s;
+	float: right;
 }
 
-.btn-export:hover{
-    background-color: white;
-    color: black;
+.btn-export:hover {
+	background-color: white;
+	color: black;
 }
 
+#paginate {
+	width: 100%;
+	margin: 32px auto;
+}
+
+#paginate .item {
+	border-bottom: 1px white;
+}
+
+#paginate .item:hover {
+	background-color: white;
+
+}
+
+#paginate .pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-top: 8px;
+}
+
+#paginate .pagination div {
+	cursor: pointer;
+
+	/* border: 1px solid #eee; */
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14;
+}
+
+#paginate .pagination div:not(.numbers),
+#paginate .pagination div.numbers div {
+	width: 40px;
+	height: 40px;
+}
+
+#paginate .pagination div.numbers div:hover,
+#paginate .pagination div.numbers div.active {
+	color: var(--primary);
+}
+
+
+@media screen and (max-width: 480px) {
+	.btn-export {
+		position: relative;
+		left: 0;
+	}
+
+	.div-top {
+		display: block;
+	}
+
+	#reset-table {
+		width: 25%
+	}
+
+	#filtrar-tabela {
+		width: 45%;
+		font-size: 65%;
+	}
+
+
+	.progresso {
+		font-size: 15px;
+	}
+
+	#ambiente-atual {
+		font-size: 30px;
+	}
+
+}

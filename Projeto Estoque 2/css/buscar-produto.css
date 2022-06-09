@@ -1,0 +1,111 @@
+body {
+    background-color: black;
+}
+
+
+.cabecalho-top {
+    background-color: black;
+    width: 100%;
+    height: 4em;
+}
+
+#logo {
+    width: 190px;
+    height: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.div-buscarProduto {
+    background-color: black;
+    display: block;
+    margin-top: 30PX;
+
+}
+
+.section-container {
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+#btn-buscarProduto {
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    float: right;
+    transition: all 1s;
+
+}
+
+#btn-buscarProduto:hover {
+    background-color: white;
+    color: black;
+}
+
+#filtrar-tabela {
+    width: 20%;
+    height: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 1em 0;
+}
+
+.progresso {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 100px;
+    width: 25%;
+    animation: piscaPisca 2s infinite;
+
+}
+
+@keyframes piscaPisca {
+    30% {
+        color: gray;
+    }
+}
+
+#ambiente-atual {
+    color: #fefefe;
+    font-size: 2.5em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 20px;
+    opacity: 85%;
+
+}
+
+#erro-busca {
+    color: red;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.info-product:hover {
+    text-decoration: underline black;
+    cursor: pointer;
+
+}

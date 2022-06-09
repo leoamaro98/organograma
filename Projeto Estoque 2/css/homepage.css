@@ -1,7 +1,5 @@
 body {
     background-color: rgb(0, 0, 0);
-
-
 }
 
 #title {
@@ -11,30 +9,37 @@ body {
 
 #caixa {
     font-family: "Product Sans Medium";
-    font-size: 40px;
-    color: white;
     background-color: rgb(20, 20, 20);
-    height: 800px;
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 99%;
+    width: 98%;
     text-align: center;
+    position: absolute;
     border-radius: 8px;
-
 }
 
+.div-login {
+    display: inline-block;
+    position: relative;
+}
+
+#logo {
+    margin: 5% 0 0 0;
+    width: 25%;
+}
 
 #ambientes-home {
+    padding: 2px 2px;
     font-family: "Product Sans Medium";
+    width: 40%;
     text-align: center;
-    width: 200px;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     background-color: black;
     border: 1px solid white;
     border-radius: 8px;
     transition: all 1s;
-
+    position: relative;
+    left: 9px
 }
 
 #ambientes:hover {
@@ -42,7 +47,6 @@ body {
     color: black;
 
 }
-
 
 #buscar-paciente {
     font-family: "Product Sans Medium";
@@ -57,110 +61,34 @@ body {
     cursor: pointer;
     transition: all 1s;
 
-
 }
 
 #buscar-paciente:hover {
     background-color: white;
     color: black;
-
 }
-
-
-#tabela {
-    font-family: "Calibri";
-    color: white;
-    border-radius: 8px;
-}
-
-th {
-    font-family: "Calibri";
-    color: black;
-}
-
-tr:hover {
-    color: black;
-    background-color: white;
-
-}
-
-
-
-
-#reset-table {
-    font-family: "Product Sans Medium";
-    font-size: 20px;
-    text-align: center;
-    width: 150px;
-    border-radius: 8px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
-    float: right;
-    transition: all 1s;
-
-}
-
-#reset-table:hover {
-    background-color: white;
-    color: black;
-}
-
-.progresso {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: 15px 0;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 8px;
-    height: 100px;
-    width: 25%;
-    animation: piscaPisca 2s infinite;
-}
-
-@keyframes piscaPisca {
-    30% {
-        color: gray;
-    }
-
-
-
-}
-
-
 
 .input-padrao {
     /* Transforma Input em block*/
     display: block;
     margin: 20px 0 0 20px;
-    padding: 10 10 20;
-    position: relative;
-    left: 28%;
-    border-radius: 8px; 
+    border-radius: 8px;
     font-size: 25px;
     text-align: center;
+    width: 290px;
+    height: 35px;
 
 }
-
 
 .btn-inicial {
     font-family: "Product Sans Medium";
     margin: 20px 0 0 20px;
-    padding: 10 10 20;
+    padding: 10px 10px 10px 10px;
     font-size: 25px;
+    width: 60%;
     text-align: center;
-    width: 280px;
-    height: 35px;
     border-radius: 8px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     border: 1px solid white;
     cursor: pointer;
@@ -169,23 +97,46 @@ tr:hover {
 
 .btn-inicial:hover {
     background-color: white;
-    color: black;
+    color: hsl(240, 20%, 0%);
 }
 
-.tela-login{
+.tela-login {
     display: block;
 
 }
 
-#senha{
-    -webkit-text-security:disc;
+#senha {
+    -webkit-text-security: disc;
 }
 
-.invisivel{
-	display: none;
+.invisivel {
+    display: none;
 }
 
-#erro-ajax{
-    color: red;
+#erro-ajax {
+    color: hsl(0, 98%, 56%);
     font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+
+    #caixa {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        margin: 10% 0;
+        width: 90%;
+        height: 30%;
+    }
+
+    .btn-inicial {
+        font-size: 20px;
+        width: 60%;
+        padding: 10px 10px 10px 10px;
+
+    }
+
 }

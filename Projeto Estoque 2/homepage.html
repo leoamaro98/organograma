@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <title>Lista de Estoque - Faraway Tecnologia</title>
   <link rel="stylesheet" href="css/homepage.css">
 </head>
@@ -11,29 +12,28 @@
 
   <div id="caixa">
     <header>
-      <h1><img src="img/white-logo-fw.png" width="600" height="200"></h1>
+      <h1><img id="logo" src="img/white-logo-fw.png"></h1>
     </header>
 
-    <div id="tela-login">
-
+    <div class="div-login">
       <select name="ambiente" id="ambientes-home">
         <option value="GAUSS">GAUSS</option>
         <option value="CDG">CDG</option>
         <option value="SPG">SPG</option>
         <option value="NSG">NSG</option>
       </select>
-
       <input type="text" id="usuario" class="input-padrao" required placeholder="Usuario">
-
       <input type="text" id="senha" class="input-padrao" required placeholder="Senha">
       <button id="btn-estoque" class="btn-inicial">Acessar estoque</button>
     </div>
     <span id="erro-ajax" class="invisivel">Usuario e senha incorreto</span>
+
   </div>
+
 </body>
 
-<script src="login.js"></script>
-<script src="conecta-api.js"></script>
+<script src="js/login.js"></script>
+<script src="js/conecta-api.js"></script>
 
 
 </html>
