@@ -24,7 +24,6 @@ function monstraMensagem(event) {
 }
 
 
-
 function adicionaProdutoTabela(produto) {
 
     var pacienteTr = montaTr(produto);
@@ -37,7 +36,6 @@ function adicionaProdutoTabela(produto) {
 
 function adicionaPacienteNaTabela(produto) {
     if (produto.avaliable != 0) {
-
         var pacienteTr = montaTr(produto);
         var tabela = document.querySelector("#tabela-pacientes")
         tabela.appendChild(pacienteTr);

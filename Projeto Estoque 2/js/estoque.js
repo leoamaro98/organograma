@@ -8,6 +8,8 @@ var getToken = sessionStorage.getItem('valueTextToken');
 var ambienteSelecionado = localStorage.getItem('valueText');
 var representante = sessionStorage.getItem('valueRepType');
 
+
+
 var btnBuscarProd = document.querySelector("#btn-consultaProdutos");
 
 const html = {
@@ -24,17 +26,12 @@ btnBuscarProd.addEventListener('click', () => {
 window.onload = function () {
 
     if (getToken != null) {
-
-        //console.log("Token é valido", ambienteSelecionado, "token é", getToken)
         ambienteAtual.textContent = `Estoque ${ambienteSelecionado}`;
         removeComponentes();
         conectaEstoque(ambienteSelecionado, getToken);
-
-
     } else {
         window.location.href = "homepage.html";
     }
-
 }
 
 btReset.addEventListener('click', function () {
@@ -64,7 +61,7 @@ function exportTableToCsv() {
     const CSVString = Array.from(tableRows)
         .map(row => Array.from(row.cells)
             .map(cell => cell.textContent)  //pega texto da cells
-            .join(',')).join('\n') //separa por virgula
+            .join(';')).join('\n') //separa por virgula
 
     btnExport.setAttribute(
         'href',
@@ -72,4 +69,3 @@ function exportTableToCsv() {
 
     btnExport.setAttribute('download', 'estoque.csv')
 }
-

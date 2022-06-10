@@ -32,7 +32,7 @@
 			<div class="topo-tabela">
 				<label class="filtrar-tabela" for="filtrar-tabela"></label>
 				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Filtrar Produto">
-                <button id="btn-consultaProdutos">Buscar Produto</button>
+				<button id="btn-consultaProdutos">Buscar Produto</button>
 			</div>
 
 			<div id="divCarregando" class="progresso">
@@ -46,13 +46,10 @@
 					$("#section-table").addClass("invisivel");
 					// Após 5 segundos remove ID	
 
-					var fim = sessionStorage.getItem('finalizado');
-					console.log("session é", fim)
-
 					setTimeout(function () {
 						$('#divCarregando').fadeOut('slow');
 						$("#section-table").removeClass("invisivel");
-					}, 7000);
+					}, 6000);
 				});
 
 			</script>
@@ -69,11 +66,13 @@
 								</th>
 								<th class="th-table">Descrição<div class="div-table">Descrição</div>
 								</th>
-								<th name="estoque" class="th-table">Estoque<div name="estoque" class="div-table">Estoque</div>
+								<th name="estoque" class="th-table">Estoque<div name="estoque" class="div-table">Estoque
+									</div>
 								</th>
-								<th name="pedidoAberto" class="th-table">Pedido em aberto<div name="pedidoAberto" class="div-table">Pedido em aberto</div>
+								<th name="pedidoAberto" class="th-table">Pedido<div name="pedidoAberto"
+										class="div-table">Pedido </div>
 								</th>
-								<th class="th-tables">Saldo Disponivel<div class="div-tables">Saldo Disp.</div>
+								<th class="th-tables">Saldo Disp.<div class="div-tables">Saldo Disp.</div>
 								</th>
 								<th class="th-table">Embalagem<div class="div-table">Embalagem</div>
 								</th>
@@ -88,9 +87,8 @@
 						</tbody>
 					</table>
 				</div>
-				<a data-js="btn-export" role="button" class="btn-export">Export to CSV</a>
-
 			</section>
+			<a data-js="btn-export" role="button" class="btn-export">Export to CSV</a>
 	</main>
 	<script src="js/form.js"></script>
 	<script src="js/filtra.js"></script>

@@ -5,7 +5,7 @@ var tabela = document.querySelector("#tabela")
 
 function conectaEstoque(ambiente, token) {
     //console.log(`Ambiente ${ambiente} e TOKEN ${token}`);
-
+    
     const estoque = fetch(`http://35.231.237.151:8080/gateway/api/stock?&environment=${ambiente}`, {
         method: 'GET',
         headers: {
@@ -16,16 +16,15 @@ function conectaEstoque(ambiente, token) {
         // console.log("Resposta do servidor", response)//promise
         return response.json();
     }).then(function (stock) {
-            var resposta = stock['protheus_data']['stock'];
-            var produtos = resposta;
+        var resposta = stock['protheus_data']['stock'];
+        var produtos = resposta;
 
-            //console.log("Estoque: ", resposta);
+        //console.log("Estoque: ", resposta);
 
-            produtos.forEach(function (produto) {
-                adicionaPacienteNaTabela(produto);
-            });
-            return produtos;
-        })
+        produtos.forEach(function (produto) {
+            adicionaPacienteNaTabela(produto);
+        });
+    })
 
 }
 

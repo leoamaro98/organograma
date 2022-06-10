@@ -69,12 +69,19 @@ function validaAcesso(token, ambienteSelecionado) {
             'Content-Type': 'application/json',
         },
     }).then(function (response) {
-        //console.log(response);
-        return response.json();
+        console.log(response.status);
+        return response.json()
     }).then(function (res) {
-        representanteType = res['protheus_data'].type
+        console.log(res.status)
+        if (res.status == 409) {
+            console.log(res.status)
+            representanteType = "U"
+        }
+        else {
+            representanteType = res['protheus_data'].type
+        }
         sessionStorage.setItem('valueRepType', representanteType);
-        window.location.href = "index.html"; //redireciona para tabela estoque 
+        window.location.href = "index.html";
     })
 }
 
