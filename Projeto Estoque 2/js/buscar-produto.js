@@ -1,11 +1,15 @@
+
 var btnBuscar = document.querySelector("#btn-buscarProduto");
 var filtrarTabela = document.querySelector("#filtrar-tabela");
 var getToken = sessionStorage.getItem('valueTextToken');
 var ambienteSelecionado = localStorage.getItem('valueText');
 var ambienteAtual = document.querySelector("#ambiente-atual");
 var erroBusca = document.querySelector("#erro-busca")
+var btnVoltar = document.querySelector("#btn-voltar")
 
-
+btnVoltar.addEventListener('click', function () {
+    window.location.href = "index.html";
+})
 btnBuscar.addEventListener('click', function () {
     var filtroTabelaValue = filtrarTabela.value;
 
@@ -19,8 +23,14 @@ btnBuscar.addEventListener('click', function () {
 })
 
 window.onload = function () {
-    barraProgresso();
-    ambienteAtual.textContent = `Consulta Produto ${ambienteSelecionado}`;
+
+    if (getToken != null) {
+        barraProgresso();
+        selecionaImagem();
+    } else {
+        window.location.href = "homepage.html";
+
+    }
 
 }
 
@@ -44,7 +54,6 @@ function buscaProduto(ambiente, token, produto) {
         },
 
     }).then(function (response) {
-        console.log(response);
         return response.json();
     }).then(function (produto) {
         var res = produto['protheus_data']['stock'][0];
@@ -79,3 +88,5 @@ tabela.addEventListener('dblclick', function (event) {
         console.log(codCom);
     }
 });
+
+

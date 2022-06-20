@@ -6,18 +6,10 @@ var btReset = document.querySelector('#reset-table');
 var getSenha = sessionStorage.getItem('valueTextSenha');
 var getToken = sessionStorage.getItem('valueTextToken');
 var ambienteSelecionado = localStorage.getItem('valueText');
-var representante = sessionStorage.getItem('valueRepType');
 
 
 
 var btnBuscarProd = document.querySelector("#btn-consultaProdutos");
-
-const html = {
-    get(element) {
-        return document.querySelector(element)
-    }
-
-}
 
 btnBuscarProd.addEventListener('click', () => {
     window.location.href = "buscar-produto.html";
@@ -26,11 +18,12 @@ btnBuscarProd.addEventListener('click', () => {
 window.onload = function () {
 
     if (getToken != null) {
-        ambienteAtual.textContent = `Estoque ${ambienteSelecionado}`;
+        selecionaImagem();
         removeComponentes();
         conectaEstoque(ambienteSelecionado, getToken);
     } else {
         window.location.href = "homepage.html";
+
     }
 }
 
@@ -61,7 +54,7 @@ function exportTableToCsv() {
     const CSVString = Array.from(tableRows)
         .map(row => Array.from(row.cells)
             .map(cell => cell.textContent)  //pega texto da cells
-            .join(';')).join('\n') //separa por virgula
+            .join(',')).join('\n') //separa por virgula
 
     btnExport.setAttribute(
         'href',
@@ -69,3 +62,7 @@ function exportTableToCsv() {
 
     btnExport.setAttribute('download', 'estoque.csv')
 }
+
+
+
+

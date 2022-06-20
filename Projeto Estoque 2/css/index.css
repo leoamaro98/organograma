@@ -6,40 +6,44 @@
 
 body {
 	/*background-image: linear-gradient(#fefefe, black);*/
-	background: black;
+	background: white;
 
 }
 
 
 #reset-table {
-	font-family: "Product Sans Medium";
+	font-family: Arial;
 	font-size: 20px;
 	text-align: center;
 	width: 100px;
 	border-radius: 8px;
-	background-color: black;
-	color: white;
+	background-color: #dfe3eba8;
+	color: black;
 	border: 1px solid white;
 	cursor: pointer;
-	float: right;
 	transition: all 1s;
+	position: absolute;
+	right: 0;
 
 }
 
-#btn-consultaProdutos{
+#btn-consultaProdutos {
+	font-family: Arial;
 	padding: 10px 0;
 	font-size: 15px;
 	text-align: center;
 	width: 150px;
 	border-radius: 8px;
-	background-color: black;
+	background-color: #0047ba;
 	color: white;
 	border: 1px solid white;
 	cursor: pointer;
 	float: right;
 	transition: all 1s;
+}
 
-
+#btn-consultaProdutos:hover {
+opacity: 70%;
 }
 
 
@@ -47,7 +51,6 @@ body {
 	background-color: white;
 	color: black;
 }
-
 
 .progresso {
 	display: none;
@@ -76,21 +79,6 @@ body {
 }
 
 
-header {
-	background-color: #191919;
-	height: 4em;
-	color: #FFF;
-	margin-bottom: 1em;
-
-}
-
-
-header h2 {
-	font-size: 2em;
-	display: inline-block;
-	vertical-align: middle;
-}
-
 /*header .container:before {
 	content: '';
 	display: inline-block;
@@ -98,21 +86,13 @@ header h2 {
 	vertical-align: middle;
 }*/
 
-
-
 .section-container {
 	overflow: hidden;
 	width: 80%;
 	height: 100%;
 	margin: 0 auto;
-}
+	font-family: Arial;
 
-.section-container h2 {
-	font-size: 3em;
-	display: block;
-	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: .5em;
 }
 
 label {
@@ -135,7 +115,6 @@ button:disabled {
 }
 
 #mensagens-erro {
-
 	color: red;
 
 }
@@ -153,6 +132,9 @@ button:disabled {
 	border-radius: 8px;
 	font-size: 15px;
 	padding: 1em 0;
+	background-color: #dfe3eba8;
+	color: gray;
+
 }
 
 .invisivel {
@@ -160,13 +142,26 @@ button:disabled {
 
 }
 
+#div-logo{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
 .logo {
+	width: 28%;
+	position: relative;
+	top: 30px;
+}
 
-	width: 190px;
-	margin: 10px 20px;
-	padding: 0 10px;
-	left: 0;
-
+#estoque-img {
+	width: 23%;
+	position: absolute;
+	left:30px;
+	top: 30px;
 }
 
 footer {
@@ -180,11 +175,10 @@ footer img {
 	margin: 20px;
 }
 
-
-
 #ambiente-atual {
 	color: white;
-	font-family: "Product Sans Medium";
+	font-family: Arial;
+
 }
 
 .info-product:hover {
@@ -193,19 +187,13 @@ footer img {
 
 }
 
-
-
-.div-top {
-	display: inline-block;
-}
-
 .btn-export {
 	margin-top: 10px;
 	font-size: 15px;
-	font-weight: b;
+	font-family: Arial;
 	padding: 10px 10px;
 	border-radius: 8px;
-	background-color: black;
+	background-color: #0047ba;
 	color: white;
 	border: 1px solid white;
 	cursor: pointer;
@@ -282,13 +270,22 @@ footer img {
 		font-size: 65%;
 	}
 
-
 	.progresso {
 		font-size: 15px;
 	}
 
 	#ambiente-atual {
 		font-size: 30px;
+	}
+	#div-top{
+		position: fixed;
+	}
+	.logo{
+		top: 0;
+		margin-bottom: 10px;
+	}
+	.topo-tabela{
+		margin-top: 60px;
 	}
 
 }

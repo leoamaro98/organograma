@@ -1,20 +1,18 @@
-var btnEstoque = document.querySelector("#btn-estoque");
+var btnLogin = document.querySelector("#btn-estoque");
 var ambientes = document.querySelector("#ambientes-home");
 var ambienteSelecionado = localStorage.getItem('valueText');
 var erroAjaxa = document.querySelector("#erro-ajax");
-
-
 var usuario = document.querySelector("#usuario");
 var senha = document.querySelector("#senha");
 
 
-btnEstoque.addEventListener('click', function () {
+btnLogin.addEventListener('click', function () {
     amarzenaVariaveis();
+    console.log
 
 })
 
 function login(getUser, getSenha, ambienteSelecionado) {
-    //${ambiente}
     const token = fetch(`http://35.231.237.151:8080/gateway/api/token?environment=${ambienteSelecionado}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -24,15 +22,15 @@ function login(getUser, getSenha, ambienteSelecionado) {
         })
 
     }).then(function (response) {
-        // console.log(response)
+        console.log("Dentro login")
+
         if (response.status == 200) {
             return response.json().then(function (token) {
                 resposta = token['protheus_data']['access_token'];
-                console.log(token)
                 sessionStorage.setItem('valueTextToken', resposta);
                 validaAcesso(resposta, ambienteSelecionado);
 
-                //console.log("Token é", resposta)
+                console.log("Token é", resposta)
                 // window.location.href = "buscar-produto.html"; //redireciona para tabela estoque 
 
             })
@@ -59,7 +57,6 @@ function amarzenaVariaveis() {
     login(getUser, getSenha, ambienteSelecionado);
 }
 
-
 function validaAcesso(token, ambienteSelecionado) {
     console.log("Token é", token)
     const estoque = fetch(`http://35.231.237.151:8080/gateway/api/representative?environment=${ambienteSelecionado}`, {
@@ -70,7 +67,7 @@ function validaAcesso(token, ambienteSelecionado) {
         },
     }).then(function (response) {
         console.log(response.status);
-        return response.json()
+        return response.json();
     }).then(function (res) {
         console.log(res.status)
         if (res.status == 409) {

@@ -13,24 +13,20 @@
 </head>
 
 <body>
-	<header>
-		<div class="container-top">
-			<img src="img/logo-branca.png" class="logo">
-		</div>
-	</header>
+
 	<main>
 
 		<section class="section-container">
-			<h2>
-				<div class="div-top">
-					<label id="ambiente-atual"></label>
-				</div>
-				<button id="reset-table">Voltar</button>
-			</h2>
+			<img src="img/estoque.png" id="estoque-img">
 
 
 			<div class="topo-tabela">
-				<label class="filtrar-tabela" for="filtrar-tabela"></label>
+				<div class="div-top">
+					<div id="div-logo">
+						<img src="img/LOGOGAUSS.png" class="logo">
+						<button id="reset-table">Voltar</button>
+					</div>
+				</div>
 				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Filtrar Produto">
 				<button id="btn-consultaProdutos">Buscar Produto</button>
 			</div>
@@ -60,9 +56,9 @@
 					<table id="tabela" class="list">
 						<thead>
 							<tr class="header">
-								<th class="th-tables">Codigo Comercial<div class="div-tables">Codigo Comercial</div>
-								</th>
-								<th class="th-table">Codigo Fiscal<div class="div-table">Codigo Fiscal</div>
+								<th class="th-tables">Código Comercial<div class="div-tables">Código Comercial</div></th>
+
+								<th class="th-table">Código Fiscal<div class="div-table">Código Fiscal</div>
 								</th>
 								<th class="th-table">Descrição<div class="div-table">Descrição</div>
 								</th>
@@ -88,12 +84,15 @@
 					</table>
 				</div>
 			</section>
-			<a data-js="btn-export" role="button" class="btn-export">Export to CSV</a>
+			<a data-js="btn-export" role="button" class="btn-export">Exportar CSV</a>
 	</main>
 	<script src="js/form.js"></script>
 	<script src="js/filtra.js"></script>
 	<script src="js/estoque.js"></script>
 	<script src="js/conecta-api.js"></script>
+	<script src="js/seleciona-logo.js"></script>
+
+
 
 </body>
 

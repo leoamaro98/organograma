@@ -20,8 +20,9 @@ function conectaEstoque(ambiente, token) {
         var produtos = resposta;
 
         //console.log("Estoque: ", resposta);
-
+        console.log("Produtos totais", produtos.length)
         produtos.forEach(function (produto) {
+
             adicionaPacienteNaTabela(produto);
         });
     })

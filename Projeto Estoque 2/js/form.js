@@ -12,7 +12,7 @@ function monstraMensagem(event) {
     var erros = validaPaciente(paciente);
 
     if (erros.length > 0) {
-        exibeMensagemErro(erros);
+        exibeMensagemErro(erros); 
         form.reset();
         return;
 
@@ -36,6 +36,8 @@ function adicionaProdutoTabela(produto) {
 
 function adicionaPacienteNaTabela(produto) {
     if (produto.avaliable != 0) {
+    console.log('Estoque disponivel')
+
         var pacienteTr = montaTr(produto);
         var tabela = document.querySelector("#tabela-pacientes")
         tabela.appendChild(pacienteTr);
@@ -75,14 +77,13 @@ function obtemPacienteForm(form) {
 }
 
 function montaTr(produto) {
-
+    var representante = sessionStorage.getItem('valueRepType');
     var produtoTr = document.createElement("tr");
 
     if (width >= "480") {
         produtoTr.classList.add("produto");
 
         if (representante == 'M' || representante == 'C' || representante == 'A') {
-            console.log
             produtoTr.appendChild(montaTd(produto.product, "info-product"));
             produtoTr.appendChild(montaTd(produto.product_erp, "info-producterp"));
             produtoTr.appendChild(montaTd(produto.description, "info-descricao"));
@@ -126,9 +127,9 @@ function montaTd(dado, classe) {
 function removeComponentes() {
     var representante = sessionStorage.getItem('valueRepType');
 
-    var estoque = html.get('[name="estoque"]')
-    var pedido = html.get('[name="pedidoAberto"]')
-    if (representante == 'M' || representante == 'C' ||representante == 'A') {
+    var estoque = document.querySelector('[name="estoque"]')
+    var pedido = document.querySelector('[name="pedidoAberto"]')
+    if (representante == 'M' || representante == 'C' || representante == 'A') {
         estoque.parentNode.removeChild(estoque);
         pedido.parentNode.removeChild(pedido);
     }
