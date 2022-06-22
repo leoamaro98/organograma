@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Consulta Estoque</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+	<main>
+
+		<section class="section-container">
+			<img src="img/estoque.png" id="estoque-img">
+
+
+			<div class="topo-tabela">
+				<div class="div-top">
+					<div id="div-logo">
+						<img src="img/LOGOGAUSS.png" class="logo">
+						<button id="reset-table">Voltar</button>
+					</div>
+				</div>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Filtrar Produto">
+				<button id="btn-consultaProdutos">Buscar Produto</button>
+			</div>
+
+			<div id="divCarregando" class="progresso">
+				<p>Aguarde, listando itens</p>
+			</div>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+			<script>$(document).ready(function () {
+					$("#divCarregando").show();
+					$("#section-table").addClass("invisivel");
+					// Após 5 segundos remove ID	
+
+					setTimeout(function () {
+						$('#divCarregando').fadeOut('slow');
+						$("#section-table").removeClass("invisivel");
+					}, 4000);
+				});
+
+			</script>
+
+			<section id="section-table">
+
+				<div class="container">
+					<table id="tabela" class="list">
+						<thead>
+							<tr class="header">
+								<th class="th-tables">Código Comercial<div class="div-tables">Código Comercial</div>
+								</th>
+								<th class="th-table">Código Fiscal<div class="div-table">Código Fiscal</div>
+								</th>
+								<th class="th-table">Descrição<div class="div-table">Descrição</div>
+								</th>
+								<th name="estoque" class="th-table">Estoque<div name="estoque" class="div-table">Estoque
+									</div>
+								</th>
+								<th name="pedidoAberto" class="th-table">Pedido<div name="pedidoAberto"
+										class="div-table">Pedido </div>
+								</th>
+								<th class="th-tables">Saldo Dispon<div class="div-tables">Saldo Disp.</div>
+								</th>
+								<th class="th-table">Embalagem<div class="div-table">Embalagem</div>
+								</th>
+								<th class="th-table">Fardo<div class="div-table">Fardo</div>
+								</th>
+								<th class="th-table">Caixa<div class="div-table">Caixa</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody id="tabela-pacientes">
+							<tr></tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<a data-js="btn-export" role="button" class="btn-export">Exportar Excel</a>
+
+		
+	</main>
+	<script src="js/form.js"></script>
+	<script src="js/filtra.js"></script>
+	<script src="js/estoque.js"></script>
+	<script src="js/conecta-api.js"></script>
+	<script src="js/seleciona-logo.js"></script>
+
+
+
+</body>
+
+</html>

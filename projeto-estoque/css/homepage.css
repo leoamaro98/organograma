@@ -1,0 +1,147 @@
+body {
+    background-color: white;
+}
+
+#title {
+    font-family: Arial;
+    color: white;
+}
+
+#caixa {
+    font-family: Arial;
+    height: 99%;
+    width: 98%;
+    text-align: center;
+    position: absolute;
+    border-radius: 8px;
+
+}
+
+.div-login {
+    margin-top: 15%;
+    display: inline-block;
+    position: relative;
+}
+
+#logo {
+    margin: 5% 0 0 0;
+    width: 25%;
+}
+
+#bg-img{
+    width: 99%;
+    height: 99%;
+    position: absolute;
+}
+
+#ambientes-home {
+    padding: 2px 2px;
+    font-family: Arial;
+    width: 60%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: #0047ba;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: all 1s;
+    position: relative;
+    left: 9px;
+}
+
+#ambientes-home:hover {
+   opacity: 70%;
+
+}
+
+.label-ambiente {
+    font-family: Arial;
+    font-size: 25px;
+    color: #0047ba;
+    margin-left: 10px;
+    font-weight: bolder;
+
+}
+
+.input-padrao {
+    /* Transforma Input em block*/
+    display: block;
+    margin: 20px 0 0px 0px;
+    border-radius: 8px;
+    font-size: 25px;
+    text-align: center;
+    font-family: Arial;
+
+    width: 400px;
+    height: 35px;
+    background-color: #dfe3eba8;
+    color: gray;
+
+}
+
+.btn-inicial {
+    font-family: Arial;
+    margin: 20px 0 0 20px;
+    padding: 10px 10px 10px 10px;
+    font-size: 25px;
+    text-align: center;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #0047ba;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.btn-inicial:hover {
+   opacity: 60%;
+}
+
+.tela-login {
+    display: block;
+
+}
+
+#senha {
+    -webkit-text-security: disc;
+}
+
+.invisivel {
+    display: none;
+}
+
+#erro-ajax {
+    color: hsl(0, 98%, 56%);
+    font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+
+    #caixa {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        margin: 10% 0;
+        width: 90%;
+        height: 30%;
+    }
+
+    .btn-inicial {
+        font-size: 20px;
+        width: 60%;
+        padding: 10px 10px 10px 10px;
+
+    }
+    .div-login {
+        margin-top: 45%;
+ }
+        #bg-img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+}
