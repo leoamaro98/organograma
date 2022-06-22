@@ -8,41 +8,12 @@ function monstraMensagem(event) {
     // Extraindo informacoes do paciente do form
     var paciente = obtemPacienteForm(form);
     //cria a TR e a TD do paciente
-
-    var erros = validaPaciente(paciente);
-
-    if (erros.length > 0) {
-        exibeMensagemErro(erros); 
-        form.reset();
-        return;
-
-    }
-
-    form.reset();
-    var msgErro = document.querySelector("#mensagens-erro");
-    msgErro.innerHTML = "";
 }
-
 
 function adicionaProdutoTabela(produto) {
-
-    var pacienteTr = montaTr(produto);
-    var tabela = document.querySelector("#tabela-pacientes")
-    tabela.appendChild(pacienteTr);
-
-}
-
-
-
-function adicionaPacienteNaTabela(produto) {
-    if (produto.avaliable != 0) {
-    console.log('Estoque disponivel')
-
         var pacienteTr = montaTr(produto);
         var tabela = document.querySelector("#tabela-pacientes")
         tabela.appendChild(pacienteTr);
-
-    }
 }
 
 
@@ -124,9 +95,8 @@ function montaTd(dado, classe) {
 
 }
 
-function removeComponentes() {
+ function removeComponentes() {
     var representante = sessionStorage.getItem('valueRepType');
-
     var estoque = document.querySelector('[name="estoque"]')
     var pedido = document.querySelector('[name="pedidoAberto"]')
     if (representante == 'M' || representante == 'C' || representante == 'A') {

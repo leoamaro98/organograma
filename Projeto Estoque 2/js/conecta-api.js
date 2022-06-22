@@ -23,7 +23,7 @@ function conectaEstoque(ambiente, token) {
         console.log("Produtos totais", produtos.length)
         produtos.forEach(function (produto) {
 
-            adicionaPacienteNaTabela(produto);
+            adicionaProdutoTabela(produto);
         });
     })
 

@@ -47,20 +47,23 @@ tabela.addEventListener('dblclick', function (event) {
 
 btnExport.addEventListener('click', function () {
     exportTableToCsv();
+ 
 });
 
 function exportTableToCsv() {
     var tableRows = document.querySelectorAll("tr");
+ 
+
     const CSVString = Array.from(tableRows)
         .map(row => Array.from(row.cells)
             .map(cell => cell.textContent)  //pega texto da cells
-            .join(',')).join('\n') //separa por virgula
+            .join(';')).join('\n') //separa por virgula
 
     btnExport.setAttribute(
         'href',
         `data:text/csvcharset=utf-8, ${encodeURIComponent(CSVString)}`)
 
-    btnExport.setAttribute('download', 'estoque.csv')
+    btnExport.setAttribute('download', 'estoque.xlsx')
 }
 
 

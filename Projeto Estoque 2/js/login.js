@@ -8,7 +8,6 @@ var senha = document.querySelector("#senha");
 
 btnLogin.addEventListener('click', function () {
     amarzenaVariaveis();
-    console.log
 
 })
 
@@ -58,7 +57,6 @@ function amarzenaVariaveis() {
 }
 
 function validaAcesso(token, ambienteSelecionado) {
-    console.log("Token é", token)
     const estoque = fetch(`http://35.231.237.151:8080/gateway/api/representative?environment=${ambienteSelecionado}`, {
         method: 'GET',
         headers: {
