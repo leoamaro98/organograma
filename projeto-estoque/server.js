@@ -1,6 +1,6 @@
 var http = require('http');
 var static = require('node-static');
-var path = new static.Server(`${__dirname}`)
+var path = new static.Server(`${__dirname}`);
 console.log("O path é", path);
 
 
