@@ -27,6 +27,7 @@ window.onload = function () {
     if (getToken != null) {
         barraProgresso();
         selecionaImagem();
+        removeComponentes()
     } else {
         window.location.href = "homepage.html";
 

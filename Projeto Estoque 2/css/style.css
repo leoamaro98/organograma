@@ -29,7 +29,7 @@ td+td {
 }
 
 td,
-th {
+th, .th-tables {
   border-bottom: 1px solid #eee;
   color: #000;
   padding: 10px 25px;
@@ -59,7 +59,7 @@ opacity: 50%;
 
 
 
-th div {
+.div-tables, .div-table {
   position: absolute;
   color: #fff;
   font-weight: bolder;
