@@ -20,7 +20,7 @@
 .container {
   overflow-y: scroll;
   height: 600px;
-  width: 112%;
+  width: 109%;
 }
 
 td+td {
@@ -46,6 +46,10 @@ opacity: 50%;
 
 }
 
+#embalagem:before{
+    content: "Embalagem";
+
+}
 .th-table,
 .th-tables {
   height: 0;

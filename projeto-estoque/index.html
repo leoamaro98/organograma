@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
+
 <body>
 
 	<main>
@@ -53,25 +54,25 @@
 					<table id="tabela" class="list">
 						<thead>
 							<tr class="header">
-								<th class="th-tables">Código Comercial<div class="div-tables">Código Comercial</div>
+								<th class="th-tables"><div class="div-tables">Código Comercial</div>
 								</th>
-								<th class="th-table">Código Fiscal<div class="div-table">Código Fiscal</div>
+								<th class="th-table"><div class="div-table">Código Fiscal</div>
 								</th>
-								<th class="th-table">Descrição<div class="div-table">Descrição</div>
+								<th class="th-table"><div class="div-table">Descrição</div>
 								</th>
-								<th name="estoque" class="th-table">Estoque<div name="estoque" class="div-table">Estoque
+								<th name="estoque" class="th-table"><div name="estoque" class="div-table">Estoque
 									</div>
 								</th>
-								<th name="pedidoAberto" class="th-table">Pedido<div name="pedidoAberto"
+								<th name="pedidoAberto" class="th-table"><div name="pedidoAberto"
 										class="div-table">Pedido </div>
 								</th>
-								<th class="th-tables">Saldo Dispon<div class="div-tables">Saldo Disp.</div>
+								<th class="th-tables"><div class="div-tables">Saldo</div>
 								</th>
-								<th class="th-table">Embalagem<div class="div-table">Embalagem</div>
+								<th id="embalagem" class="th-table"><div class="div-table">Embalagem</div>
 								</th>
-								<th class="th-table">Fardo<div class="div-table">Fardo</div>
+								<th class="th-table"><div class="div-table">Fardo</div>
 								</th>
-								<th class="th-table">Caixa<div class="div-table">Caixa</div>
+								<th class="th-table"><div class="div-table">Caixa</div>
 								</th>
 							</tr>
 						</thead>
@@ -81,17 +82,16 @@
 					</table>
 				</div>
 			</section>
-			<a data-js="btn-export" role="button" class="btn-export">Exportar excel</a>
-
-		
+			<!--<a data-js="btn-export" role="button" class="btn-export>Exportar excel</a> -->
+			<button class="btn-export">Exportar excel</button>
+			
 	</main>
 	<script src="js/form.js"></script>
 	<script src="js/filtra.js"></script>
 	<script src="js/estoque.js"></script>
 	<script src="js/conecta-api.js"></script>
 	<script src="js/seleciona-logo.js"></script>
-
-
+	<script src="js/table2excel.js"></script>
 
 </body>
 

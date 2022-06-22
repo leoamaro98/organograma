@@ -1,7 +1,7 @@
 
 var ambientes = document.querySelector("#ambientes");
 var tabela = document.querySelector("#tabela");
-var btnExport = document.querySelector('[data-js="btn-export"]');
+var btnExport = document.querySelector('.btn-export');
 var btReset = document.querySelector('#reset-table');
 var getSenha = sessionStorage.getItem('valueTextSenha');
 var getToken = sessionStorage.getItem('valueTextToken');
@@ -46,13 +46,15 @@ tabela.addEventListener('dblclick', function (event) {
 });
 
 btnExport.addEventListener('click', function () {
-    exportTableToCsv();
- 
+    console.log("BTN PRESS")
+    var table2excel = new Table2Excel();
+    table2excel.export(document.querySelector("#tabela"));
+
 });
 
 function exportTableToCsv() {
     var tableRows = document.querySelectorAll("tr");
- 
+
 
     const CSVString = Array.from(tableRows)
         .map(row => Array.from(row.cells)
