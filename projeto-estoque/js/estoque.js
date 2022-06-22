@@ -57,13 +57,13 @@ function exportTableToCsv() {
     const CSVString = Array.from(tableRows)
         .map(row => Array.from(row.cells)
             .map(cell => cell.textContent)  //pega texto da cells
-            .join(';')).join('\n') //separa por virgula
+            .join(',')).join('\n') //separa por virgula
 
     btnExport.setAttribute(
         'href',
         `data:text/csvcharset=utf-8, ${encodeURIComponent(CSVString)}`)
 
-    btnExport.setAttribute('download', 'estoque.xlsx')
+    btnExport.setAttribute('download', 'estoque.xls')
 }
 
 
