@@ -1,33 +1,21 @@
+import { selecionaImagem } from './seleciona-logo.js'
+import {montaTabela} from './monta-tabela.js'
+
 
 var btnBuscar = document.querySelector("#btn-buscarProduto");
-var filtrarTabela = document.querySelector("#filtrar-tabela");
+var filtrarTabela = document.querySelector("#input-padrao");
 var getToken = sessionStorage.getItem('valueTextToken');
-var ambienteSelecionado = localStorage.getItem('valueText');
-var ambienteAtual = document.querySelector("#ambiente-atual");
+var ambienteSelecionado = sessionStorage.getItem('valueText');
 var erroBusca = document.querySelector("#erro-busca")
-var btnVoltar = document.querySelector("#btn-voltar")
+let tabela=document.querySelector("#tabela")
 
-btnVoltar.addEventListener('click', function () {
-    window.location.href = "index.html";
-})
-btnBuscar.addEventListener('click', function () {
-    var filtroTabelaValue = filtrarTabela.value;
 
-    if (filtroTabelaValue == "") {
-        erroBusca.classList.remove("invisivel")
-    } else {
-        buscaProduto(ambienteSelecionado, getToken, filtroTabelaValue);
-        erroBusca.classList.add("invisivel")
-
-    }
-})
 
 window.onload = function () {
 
     if (getToken != null) {
-        barraProgresso();
-        selecionaImagem();
-        removeComponentes()
+      selecionaImagem();
+        
     } else {
         window.location.href = "homepage.html";
 
@@ -35,46 +23,7 @@ window.onload = function () {
 
 }
 
-function barraProgresso() {
-    $("#divCarregando").show();
-    $("#section-table").addClass("invisivel");
-}
 
-function carregaTabela() {
-    $('#divCarregando').fadeOut('slow');
-    $("#section-table").removeClass("invisivel");
-}
-
-
-function buscaProduto(ambiente, token, produto) {
-    const estoque = fetch(`http://35.231.237.151:8080/gateway/api/stock?products=${produto}&environment=${ambiente}`, {
-        method: 'GET',
-        headers: {
-            'authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-        },
-
-    }).then(function (response) {
-        return response.json();
-    }).then(function (produto) {
-        var res = produto['protheus_data']['stock'][0];
-        console.log("Produto: ", res);
-
-        if (res == undefined) {
-            erroBusca.classList.remove("invisivel")
-            console.log("produto é", res)
-        }
-        else {
-            adicionaProdutoTabela(res);
-            erroBusca.classList.add("invisivel")
-            carregaTabela();
-
-        }
-
-
-    })
-
-}
 
 tabela.addEventListener('dblclick', function (event) {
     var codCom = $(event.target).text();
@@ -91,3 +40,15 @@ tabela.addEventListener('dblclick', function (event) {
 });
 
 
+
+btnBuscar.addEventListener('click', function () {
+    var filtroTabelaValue = filtrarTabela.value;
+
+    if (filtroTabelaValue == "") {
+        erroBusca.classList.remove("invisivel")
+    } else {
+        buscaProduto(ambienteSelecionado, getToken, filtroTabelaValue);
+        erroBusca.classList.add("invisivel")
+
+    }
+})

@@ -7,29 +7,64 @@
     <title>Consulta Produto</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/buscar-produto.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="assest/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/tabela-padrao.css">
+
+    <link rel="stylesheet" href="./css/default.css">
+
 </head>
 
 <body>
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="buscar-produto.html">Buscar Produto</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Estoque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pedidos.html">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="titulos-aberto.html">Títulos em aberto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Sair</a>
+                    </li>
+                </ul>
+                <form class="form-inline"></form>
+            </div>
+        </nav>
+    </div>
+
     <main>
-
-
         <section class="section-container">
-
             <img src="img/estoque.png" id="estoque-img">
-
             <div class="div-buscarProduto">
                 <div class="div-top">
-                    <div id="div-logo">
+                    <div class="div-logo">
                         <img src="img/LOGOGAUSS.png" class="logo">
-                        <button id="btn-voltar">Voltar</button>
                     </div>
                 </div>
-                <label class="filtrar-tabela" for="filtrar-tabela"></label>
-                <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o codigo do produto">
+
+                <div class="filtrar-padrão">
+                    <input id="input-padrao" class="form-control" type="text" placeholder="Código Comercial">
+                    <button id="btn-buscarProduto" type="button" class="btn btn-primary">Buscar</button>
+                </div>
+
+                <!-- <label class="filtrar-tabela" for="filtrar-tabela"></label> -->
+                <!-- <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o codigo do produto"> -->
                 <span class="invisivel" id="erro-busca">Pesquisa invalida, digite o codigo do produto</span>
-                <button id="btn-buscarProduto">Buscar</button>
+                <!-- <button id="btn-buscarProduto">Buscar</button> -->
             </div>
+
+
+
 
 
             <div id="divCarregando" class="progresso">
@@ -38,40 +73,36 @@
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-            <section id="section-table">
-                <div class="container">
-                    <table id="tabela" class="list">
-                        <thead>
-                            <tr class="header">
-                                <th class="th-tables">Código Comercial<div class="div-tables">Código Comercial</div>
-                                </th>
-                                <th class="th-table">Código Fiscal<div class="div-table">Código Fiscal</div>
-                                </th>
-                                <th class="th-table">Descrição<div class="div-table">Descrição</div>
-                                </th>
-                                <th name="estoque" class="th-table">Estoque<div class="div-table">Estoque</div>
-                                </th>
-                                <th name="pedidoAberto" class="th-table">Pedido em aberto<div class="div-table">Pedido em aberto</div>
-                                </th>
-                                <th class="th-tables">Saldo Disp<div class="div-tables">Saldo Disp.</div>
-                                </th>
-                                <th class="th-table">Embalagem<div class="div-table">Embalagem</div>
-                                </th>
-                                <th class="th-table">Fardo<div class="div-table">Fardo</div>
-                                </th>
-                                <th class="th-table">Caixa<div class="div-table">Caixa</div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabela-pacientes">
-                            <tr></tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div id="container-tabel-pedido">
+                <table id="tabela" class="table">
+                    <thead id="thead">
+                        <tr>
+                            <th scope="col">Cod. Com</th>
+                            <th scope="col">Cod. Fiscal</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Estoque</th>
+                            <th scope="col">Pedido</th>
+                            <th scope="col">Saldo Disp</th>
+                            <th scope="col">Embalagem</th>
+                            <th scope="col">Fardo</th>
+                            <th scope="col">Caixa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
     </main>
-    <script src="js/buscar-produto.js"></script>
-    <script  src="js/form.js" ></script>
-	<script src="js/seleciona-logo.js"></script>
+    <script src="js/buscar-produto.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
 

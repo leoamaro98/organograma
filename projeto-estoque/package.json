@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/leozinhobk/projeto-estoque#readme",
   "dependencies": {
+    "bootstrap": "^5.2.0-beta1",
     "node-static": "^0.7.11"
   }
 }

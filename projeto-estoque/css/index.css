@@ -114,10 +114,14 @@ button:disabled {
 
 }
 
-#mensagens-erro {
+#mensagens-erro,#erro-busca {
 	color: red;
-
+	margin-left: 10px;
+    font-size: 20px;
 }
+
+   
+
 
 .fadeOut {
 	opacity: 0;
@@ -142,27 +146,6 @@ button:disabled {
 
 }
 
-#div-logo{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-
-}
-
-.logo {
-	width: 28%;
-	position: relative;
-	top: 30px;
-}
-
-#estoque-img {
-	width: 23%;
-	position: absolute;
-	left:30px;
-	top: 30px;
-}
 
 footer {
 	text-align: center;

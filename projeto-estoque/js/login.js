@@ -22,22 +22,25 @@ function login(getUser, getSenha, ambienteSelecionado) {
 
     }).then(function (response) {
         console.log("Dentro login")
-
+        salvaUser = null;
+        salvaSenha = null;
+        console.log(salvaSenha, salvaUser);
         if (response.status == 200) {
             return response.json().then(function (token) {
                 resposta = token['protheus_data']['access_token'];
                 sessionStorage.setItem('valueTextToken', resposta);
                 validaAcesso(resposta, ambienteSelecionado);
 
-                console.log("Token é", resposta)
+
                 // window.location.href = "buscar-produto.html"; //redireciona para tabela estoque 
 
             })
-        } else if (response.status == 401) {
+        } else{
             console.log("usuario e senha incorretos");
             erroAjaxa.classList.remove("invisivel");
         }
     })
+
 
 }
 
@@ -46,14 +49,9 @@ function amarzenaVariaveis() {
     var salvaUser = usuario.value;
     var salvaSenha = senha.value
 
-    localStorage.setItem('valueText', ambienteSelecionado);
-    sessionStorage.setItem('valueTextUser', salvaUser);
-    sessionStorage.setItem('valueTextSenha', salvaSenha);
+    sessionStorage.setItem('valueText', ambienteSelecionado);
 
-    var getUser = sessionStorage.getItem('valueTextUser');
-    var getSenha = sessionStorage.getItem('valueTextSenha');
-
-    login(getUser, getSenha, ambienteSelecionado);
+    login(salvaUser, salvaSenha, ambienteSelecionado);
 }
 
 function validaAcesso(token, ambienteSelecionado) {

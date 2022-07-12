@@ -4,30 +4,6 @@ body {
 }
 
 
-
-
-#div-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-}
-
-.logo {
-    width: 28%;
-    position: relative;
-    top: 30px;
-}
-
-#estoque-img {
-    width: 23%;
-    position: absolute;
-    left: 30px;
-    top: 30px;
-}
-
 .div-buscarProduto {
     background-color: white;
     display: block;

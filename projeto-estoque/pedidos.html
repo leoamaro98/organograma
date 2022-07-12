@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assest/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/tabela-padrao.css">
+    <link rel="stylesheet" href="./css/default.css">
+
+
+
+    <title>Pedidos</title>
+</head>
+
+<body>
+
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="pedidos.html">Pedidos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Estoque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="titulos-aberto.html">Títulos em aberto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Sair</a>
+                    </li>
+                </ul>
+                <form class="form-inline"></form>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="div-img-padrao">
+        <img src="img/pedidos.png" class="img-padrao">
+    </div>
+
+
+    <div class="div-logo">
+        <img src="img/LOGOGAUSS.png" class="logo">
+    </div>
+
+    <div class="container-table">
+        <span id="erro-padrao" class="invisivel">Nome ou CNPJ não encontrado</span>
+        <div class="filtrar-padrão">
+            <input id="input-cnpj" class="form-control" type="text" placeholder="Nome ou CNPJ">
+        </div>
+
+        <div id="div-progresso">
+            <div id="barra-progresso" class="progress-bar-striped progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div id="divCarregando" class="aguarde">
+            <p>Aguarde, listando itens</p>
+        </div>
+
+        <div id="container-tabel-pedido">
+            <table id="tabela" class="table">
+                <thead id="thead">
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Criado em</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Série</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Danfe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <span id="pagina-total" class="badge badge-secondary"></span>
+
+        <section id="paginate">
+            <nav aria-label="Page navigation example">
+                <ul id="ul-paginate" class="pagination">
+                    <li class="page-item"><a id="prev" class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a id="first" class="page-link" href="#">Inicio</a></li>
+                    <li class="page-item"><a id="next" class="page-link" href="#">Próxima</a></li>
+                </ul>
+            </nav>
+
+        </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <!-- <script>
+        $("#prev").click(function () {
+            reload();
+        });
+        $("#first").click(function () {
+            reload();
+        });
+        $("#next").click(function () {
+            reload();
+        });
+
+
+        function reload() {
+            $("#div-progress").show('slow');
+            // $("#container-tabel-pedido").hide('slow');
+            // Após 5 segundos remove ID	
+            setTimeout(function () {
+                $('#div-progress').hide('slow');
+                // $("#container-tabel-pedido").show("slow");
+            }, 1700);
+        }
+    </script> -->
+
+
+</body>
+<script src="./js/pedidos.js" type="module"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,87 @@
+.div-logo {
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.logo {
+	width: 20%;
+	margin: auto;
+	position: relative;
+
+}
+
+/*################################################## CAMPO FILTRO ################################################## */
+
+.filtrar-padrão {
+	margin-bottom: 10px;
+	margin-left: 0;
+	display: inline;
+
+}
+
+#input-padrao {
+	width: 30%;
+	margin-right: 10px;
+	float: left;
+}
+
+
+#select-estoque {
+	width: 20%;
+	padding: 8px 8px;
+	border-radius: 8px;
+}
+
+
+/*################################################## CAMPO FILTRO ################################################## */
+
+
+#estoque-img {
+	width: 18%;
+	position: relative;
+	top: 30px;
+
+}
+
+.menu nav {
+	padding-left: 10px;
+}
+
+#divCarregando {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 30px 0;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 8px;
+	height: 100px;
+	width: 25%;
+	animation: piscaPisca 2s infinite;
+
+}
+
+@keyframes piscaPisca {
+	30% {
+		color: gray;
+	}
+}
+
+.invisivel {
+	display: none;
+}
+
+
+.img-padrao{
+	width: 18%;
+	position: relative;
+	top: 30px;
+
+}
