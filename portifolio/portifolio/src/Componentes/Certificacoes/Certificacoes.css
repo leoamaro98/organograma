@@ -1,0 +1,30 @@
+.certificacoes {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+
+}
+
+
+.certificacoes img {
+    width: 22px;
+    height: 22px;
+    margin-right: 24px;
+}
+
+.certificacoes li {
+    list-style: none;
+    color: gray;
+    font-size: 1.15rem;
+
+
+
+}
+
+.certificacoes h6 {
+    color: gray;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 32px;
+    text-transform: uppercase;;
+}

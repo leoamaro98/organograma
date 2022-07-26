@@ -1,0 +1,36 @@
+.cargos {
+    margin-top: 40px;
+    display: flex;
+    padding-bottom: 96px;
+    
+}
+
+.cargos h3{
+    color: gray
+}
+
+
+.cargos h4{
+    color: white;
+}
+
+
+
+.cargos p{
+    padding-top: 18px;
+    color: gray;
+    font-weight: 350;
+    font-size: 1.15rem;
+}
+
+.cargos span{
+	color: rgb(248, 95, 13);
+
+}
+
+.cabecalho{
+    display: block;
+    box-sizing: border-box;
+    width: 70%; 
+
+}

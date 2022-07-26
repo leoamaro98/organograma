@@ -1,0 +1,46 @@
+.menu {
+    width: 17rem;
+    height:  100vh;
+    text-align: center;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+li a {
+    display: block;
+    color: lightgray;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase
+    
+}
+
+
+
+.active{
+    color: white;
+    font-size: 22px;
+
+}
+
+/* Change the link color on hover */
+.active, li a:hover {
+    color: white;
+}

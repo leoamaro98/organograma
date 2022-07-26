@@ -1,0 +1,48 @@
+
+
+.sobre {
+
+    width: 70%;
+    min-height: 100vh;
+    margin-top: 32px;
+    padding: 48px 48px;
+
+
+}
+
+.sobre h1 {
+    color: gray;
+    font-size: 5rem;
+    font-weight: 1000;
+    
+    
+}
+
+.sobre span{
+	color: rgb(248, 95, 13);
+}
+
+.sobre div {
+    margin-bottom: 3rem;
+    font-size: 24px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.sobre a {
+    color: rgb(248, 95, 13);
+    text-decoration: none
+
+}
+
+.sobre a:hover {
+    text-decoration: underline;
+}
+
+
+.sobre p{
+    color: gray;
+    font-weight: 350;
+    font-size: 1.15rem;
+
+}

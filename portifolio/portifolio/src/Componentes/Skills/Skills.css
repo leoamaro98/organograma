@@ -1,0 +1,19 @@
+.skills {
+    min-height: 100vh;
+    padding-top: 3rem ;
+    padding-bottom: 3rem ;
+    
+}
+
+
+.skills h5{
+    color: gray;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.skills h6 {
+	color: rgb(248, 95, 13);
+    font-weight: 800;
+    font-size: calc(1.275rem + .3vw);
+}

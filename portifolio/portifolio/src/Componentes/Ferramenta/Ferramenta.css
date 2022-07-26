@@ -1,0 +1,24 @@
+.titulo-ferramenta {
+    margin-bottom: 32px;
+}
+
+
+.ferramenta {
+    display: inline-block;
+    margin: 32px 32px 0 0;
+
+
+}
+
+
+.ferramenta img {
+    width: 64px;
+    height: 64px;
+    filter: invert(57%) sepia(51%) saturate(0%)  brightness(104%) contrast(97%);
+
+}
+.ferramenta img:hover {
+    filter: invert(57%) sepia(51%) saturate(2878%) brightness(104%) contrast(97%);
+
+}
+

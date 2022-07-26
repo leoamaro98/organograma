@@ -1,0 +1,38 @@
+.formacao {
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 18px;
+    
+}
+
+.formacao h3{
+       
+	color: rgb(248, 95, 13);
+
+}
+
+
+.formacao h4{
+    color: gray;
+}
+
+
+
+.formacao p{
+    padding-top: 18px;
+    color: gray;
+    font-weight: 350;
+    font-size: 1.15rem;
+}
+
+.formacao span{
+	color: rgb(248, 95, 13);
+
+}
+
+.cabecalho-formacao{
+    display: block;
+    box-sizing: border-box;
+    width: 70%; 
+
+}
